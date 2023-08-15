@@ -4,11 +4,9 @@
   <head>
     <meta charset="UTF-8" />
     <title>Gony World</title>
-    <link rel="stylesheet" href="./static/layout.css" />
-    <link rel="stylesheet" href="./static/font.css" />
-    <link rel="stylesheet" href="./static/home.css" />]
     <link rel="stylesheet" href="{% static 'layout.css' %}" />
-    <img src="{% static 'images/cyworld1.png' %}" alt="프로필 이미지" />
+    <link rel="stylesheet" href="{% static 'font.css' %}" />
+    <link rel="stylesheet" href="{% static 'home.css' %}" />
 
   </head>
   <body>
@@ -22,9 +20,9 @@
             <div class="box profile-box">
               <div class="profile-image">
                 <img
-                  class="profile-image-img"
-                  src="./static/images/cyworld1.png"
-                  alt="프로필 이미지"
+                    class="profile-image-img"
+                    src="{% static 'images/보노보노.jpg' %}"
+                    alt="프로필 이미지"
                 />
               </div>
               <div class="profile-text font-kyobohand">
@@ -86,17 +84,17 @@
               <div class="miniroom">
                 <div class="box-title">Miniroom</div>
                 <div class="miniroom-gif-box">
-                  <img src="./static/images/myroom.png" alt="수지니의 미니룸" />
+                  <img src="{% static 'images/myroom.jpg' %}" alt="고니 미니룸" />
                 </div>
               </div>
             </div>
           </div>
           <div class="menu-container">
             <div class="menu-button">
-              <a href="home.html"><button>홈</button></a>
-              <a href="diary.html"><button>다이어리</button></a>
-              <a href="picture.html"><button>사진첩</button></a>
-              <a href="guestbook.html"><button>방명록</button></a>
+              <a href="{% url 'dashboard' %}"><button>홈</button></a>
+              <a href="{% url 'diary' %}"><button>다이어리</button></a>
+              <a href="{% url 'picture' %}"><button>사진첩</button></a>
+              <a href="{% url 'guestbook' %}"><button>방명록</button></a>
             </div>
           </div>
         </div>

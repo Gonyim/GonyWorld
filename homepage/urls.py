@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import DashboardView
+from .views import DashboardView, DiaryView, PictureView, GuestbookView
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -26,6 +26,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('', DashboardView.as_view(), name='dashboard'),
+    path('diary/', DiaryView.as_view(), name='diary'),
+    path('picture/', PictureView.as_view(), name='picture'),
+    path('guestbook/', GuestbookView.as_view(), name='guestbook'),
 ]
 
 
