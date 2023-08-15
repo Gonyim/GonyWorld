@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gony World</title>
+    <link rel="stylesheet" href="{% static 'layout.css' %}" />
+    <link rel="stylesheet" href="{% static 'font.css' %}" />
+    <link rel="stylesheet" href="{% static 'home.css' %}" />
+    <link rel="stylesheet" href="{% static 'navbar.css' %}" />
+  </head>
+  <body>
+    {% include 'homepage/navbar.html' %}
+    {% block content %}{% endblock %}
+  </body>
+</html>

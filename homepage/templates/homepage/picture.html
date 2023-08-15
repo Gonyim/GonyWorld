@@ -1,4 +1,6 @@
+{% extends 'homepage/base.html' %}
 {% load static %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -7,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'layout.css' %}" />
     <link rel="stylesheet" href="{% static 'font.css' %}" />
     <link rel="stylesheet" href="{% static 'home.css' %}" />
+    <link rel="stylesheet" href="{% static 'picture.css' %}" />
   </head>
   <body>
     <div class="bookcover">
@@ -55,7 +58,7 @@
                 <div class="photo-image">
                     <img
                     class="photo-image-img"
-                    src="./static/images/photo1.png"
+                    src="{% static 'images/photo1.jpg' %}"
                     alt="사진첩 이미지"
                     />
                 </div>
@@ -63,7 +66,7 @@
                 <div class="photo-image">
                     <img
                     class="photo-image-img"
-                    src="./static/images/photo2.png"
+                    src="{% static 'images/photo2.jpg' %}"
                     alt="사진첩 이미지"
                     />
                 </div>
@@ -71,7 +74,7 @@
                 <div class="photo-image">
                     <img
                     class="photo-image-img"
-                    src="./static/images/photo3.png"
+                    src="{% static 'images/photo3.jpg' %}"
                     alt="사진첩 이미지"
                     />
                 </div>
@@ -89,5 +92,4 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
+{% endblock %}

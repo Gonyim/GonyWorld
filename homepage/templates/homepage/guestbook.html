@@ -1,4 +1,6 @@
+{% extends 'homepage/base.html' %}
 {% load static %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -7,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'layout.css' %}" />
     <link rel="stylesheet" href="{% static 'font.css' %}" />
     <link rel="stylesheet" href="{% static 'home.css' %}" />
+    <link rel="stylesheet" href="{% static 'guestbook.css' %}" />
     <script src="https://kit.fontawesome.com/ab54b9d48d.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -59,7 +62,7 @@
                         </div>
                         <div class="guestbook-contents">
                             <div class="guestbook-image background-1">
-                                <img src="./static/images/profile1.png" alt="프로필 사진" />
+                                <img src="{% static 'images/profile.jpg' alt=프로필사진 %}" />
                             </div>
                             <div class="guestbook-text">
                                 <p>이 글귀 좋더라.. 읽어봐..<br><br><br>울ㅈ1않ㄱㅣ<br>아프ㅈ1않ㄱㅣ<br>씩씩ㅎrㄱㅣ<br>억ㅈㅣ로ㄹr도 웃ㄱㅣ<br>ㅌ1 ㄴㅐㅈㅣ 말ㄱㅣ<br>.<br>.<br>.<br>오늘도 괜찮은 듯<br>그렇ㄱㅔ ㅈ1ㄴㅐㄱㅣ</p>
@@ -75,7 +78,7 @@
                     </div>
                     <div class="guestbook-contents">
                         <div class="guestbook-image background-2">
-                            <img src="./static/images/profile2.jpg" alt="프로필 사진" />
+                            <img src="{% static 'images/profile.jpg' alt=프로필사진 %}" />
                         </div>
                         <div class="guestbook-text">
                             <p>너 내가 보내준 인소 봤냐 이 부분 개쩐다<br><br><br>"누구한테 문자하냐?"<br>"사랑하는 사람한테"<br><br><br>"나한테 문자를 왜 보내"</p>
@@ -91,7 +94,7 @@
                     </div>
                     <div class="guestbook-contents">
                         <div class="guestbook-image background-3">
-                            <img src="./static/images/profile3.png" alt="프로필 사진" />
+                            <img src="{% static 'images/profile.jpg' alt=프로필사진 %}" />
                         </div>
                         <div class="guestbook-text">
                             <p>야 내일 캔모아 갈래?</p>
@@ -107,7 +110,7 @@
                     </div>
                     <div class="guestbook-contents">
                         <div class="guestbook-image background-4">
-                            <img src="./static/images/profile4.jpg" alt="프로필 사진" />
+                            <img src="{% static 'images/profile.jpg' alt=프로필사진 %}" />
                         </div>
                         <div class="guestbook-text">
                             <p>나랑 찍은 사진은 왜 안 올려 ㅡ.ㅡ</p>
@@ -126,5 +129,4 @@
             </div>
           </div>
     </script>
-</body>
-</html>
+{% endblock %}

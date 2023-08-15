@@ -1,4 +1,6 @@
+{% extends 'homepage/base.html' %}
 {% load static %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -7,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'layout.css' %}" />
     <link rel="stylesheet" href="{% static 'font.css' %}" />
     <link rel="stylesheet" href="{% static 'dashboard.css' %}" />
+    <link rel="stylesheet" href="{% static 'diary.css' %}" />
     <script src="https://kit.fontawesome.com/ab54b9d48d.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -150,5 +153,4 @@
         };
       }
     </script>
-  </body>
-</html>
+{% endblock %}
