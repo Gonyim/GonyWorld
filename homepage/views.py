@@ -14,3 +14,11 @@ class PictureView(TemplateView):
 
 class GuestbookView(TemplateView):
     template_name = 'homepage/Guestbook.html'
+
+
+class LoginView(TemplateView):
+    template_name = 'accounts/login.html'
+
+
+class RegisterView(TemplateView):
+    template_name = 'accounts/register.html'
